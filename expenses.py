@@ -4,7 +4,7 @@ expenses = [] #initialize empty array
 totalexpense = 0 #initialize our total expenses tracker
 while True: #infinite loop
     newexpense = input("Please enter value of expense, or type 'END' to finish: ") #gather user input. i will be using the "END" keyword to break the loop. this could be changed to something else if need be
-    if newexpense == "END":
+    if newexpense.upper() == "END": #the .upper() makes the input case insensitive i.e. "eND" or "end" or "eNd" will all work
         break #break loop when end keyword
     else:
         print("You entered: " + newexpense) #spit the input back to the user
@@ -17,4 +17,5 @@ while True: #infinite loop
 print("Total: "+ str(totalexpense)) # spit out the total
 print("List of expenses: ") # this is on it's own line for neatness
 print(expenses) #spits out the array... not super pretty but it works. could make it prettier using a for loop
+
 

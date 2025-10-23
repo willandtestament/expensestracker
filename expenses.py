@@ -10,6 +10,7 @@ while True: #infinite loop
         print("You entered: " + newexpense) #spit the input back to the user
         expenses.append(newexpense) #append it to the list (which just adds it to the end - this saves having to count the index and then manually inserting!)
         totalexpense += float(newexpense) # the =+ operator saves typing x = x + y
+        print("Total expenses: " + str(totalexpense)) #prints the total expenses
         if float(newexpense) > 100: # detect if expense larger than 100
             print("Specified expense has exceeded the £100 limit! Manager approval required!") #warn the user about manager approval. were this a more complicated system this is where something like a manager call system would go ;-)
 
@@ -17,5 +18,4 @@ while True: #infinite loop
 print("Total: "+ str(totalexpense)) # spit out the total
 print("List of expenses: ") # this is on it's own line for neatness
 print(expenses) #spits out the array... not super pretty but it works. could make it prettier using a for loop
-
 
